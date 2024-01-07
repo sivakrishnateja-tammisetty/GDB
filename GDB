@@ -1,0 +1,54 @@
+GDB stands for "GNU Debugger" .It will allow you to see what's going in your program  by allowing you to step through  the code , set break points , examine and change variables etc.
+This GDB is available  when you install gcc/g++ in linux  and other operating systems  such as(mac os, windows ).
+
+
+
+USEFUL COMMANDS:
+
+* compile your c++ program with this command .
+  gcc -g program.cpp -o program
+
+*Next ,load your program using this command.
+  gdb program
+
+*When gdb is running,type this command in your terminal " run " .If the program has arguments that need to be passed from terminal , type  "run arg1" , etc.
+
+*To break by line number , type the following.
+  break  program:line number
+
+*To break within a certain function(e.g: main)
+  break program:your_function
+
+*To show information about your breakpoints
+  info breakpoint
+
+*To enable/disable breakpoint
+  enable/disable breakpoint_number
+
+*To clear a breakpoint
+  clear program:linenumber
+
+*To resume execution of your program  type "contiune" or "c".
+
+*To print or inspect a variable or a register in your program, type:
+  print variablename
+  print  $register_name (e.g: $eax)
+
+*To print a vector in c++(e.g:)
+  print *(vec._M_impl._M_start)@3
+
+*If you want to know  the values in your registers , type "info registers".
+
+*To step in your program, you can type:
+  s,si,n
+  si -where the debugger will step to the next instruction.
+  s, n -where the debugger will step  to the next line in your source code.
+
+*To know what type variable  type in gdb:
+  whatis variable
+
+*set a string variable in gdb:
+  call variable.assign("new_string")
+
+*set a numerical value:
+  set var variable=number
